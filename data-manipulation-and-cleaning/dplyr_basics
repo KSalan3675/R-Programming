@@ -1,0 +1,26 @@
+library(dplyr)
+data(mtcars)
+
+# filter
+high_efficency_cars <- filter(mtcars, mpg > 20) 
+# filters cars with mpg greater than 20
+print(high_efficency_cars) 
+# prints high efficiency cars with mpg > 20
+
+# select
+car_summary <- select(mtcars, mpg, cyl, hp)
+# selects only mpg, cyl, and hp columns
+print(car_summary)
+# prints the selected columns
+
+# arrange
+sorted_cars <- arrange(mtcars, mpg)
+# sorts cars by mpg in ascending order
+print(sorted_cars)
+# sorts cars by mpg in ascending order (lowest to highest)
+
+sorted_cars <- arrange(mtcars, desc(mpg))
+# sorts cars by mpg in descending order
+print(sorted_cars)
+# prints sorted cars by mpg in descending order (highest to lowest)
+
